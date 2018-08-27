@@ -1,0 +1,60 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  /*animation: App-logo-spin infinite 20s linear;*/
+  height: 100%;
+  float: right
+}
+
+.App-header {
+  background-color: #222;
+  height: 150px;
+  padding: 20px;
+  color: white;
+}
+
+.App-title {
+  font-size: 1.5em;
+
+}
+
+.App-intro {
+  font-size: large;
+}
+
+li {
+  display: inline-block;
+  width: 250px;
+  border: 1px solid #c8c8c8;
+  border-radius: 5px;
+  margin: 5px;
+}
+
+hr{
+  color: #c8c8c8;
+}
+
+.icon-01d{
+  animation: spin-icon infinite 10s linear;
+}
+
+.icon-03d ,  .icon-10d{
+  animation: vibrate-icon infinite 0.5s linear;
+}
+
+.temp:after{
+  content:  "\00b0";
+}
+
+@keyframes spin-icon {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+
+@keyframes vibrate-icon {
+  from { transform: translateX(-1px); }
+  to { transform: translateX(1px); }
+}
