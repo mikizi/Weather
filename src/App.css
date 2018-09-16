@@ -23,8 +23,8 @@
 .App-intro {
   font-size: large;
 }
-
-li {
+/*========================================*/
+#forcast li {
   display: inline-block;
   width: 250px;
   border: 1px solid #c8c8c8;
@@ -32,16 +32,40 @@ li {
   margin: 5px;
 }
 
-hr{
-  color: #c8c8c8;
+#forcast  hr{
+  border: 1px solid #f6f6f6;
 }
+
+/*========================================*/
+
+#day-comp > ul > li{
+  display: inline-block;
+  margin: 0 25px;
+  text-align: left;
+}
+
+#day-comp label{
+  margin: 5px;
+}
+
+#day-comp label:after{
+ content: ': ';
+}
+
+#day-comp span{
+ float: right;
+ font-style: italic;
+  color: darkred;
+}
+/*========================================*/
+
 
 .icon-01d{
   animation: spin-icon infinite 10s linear;
 }
 
 .icon-03d ,  .icon-10d{
-  animation: vibrate-icon infinite 0.5s linear;
+  animation: vibrate-icon infinite 1s linear;
 }
 
 .temp:after{
@@ -53,8 +77,10 @@ hr{
   to { transform: rotate(360deg); }
 }
 
+/*========================================*/
 
 @keyframes vibrate-icon {
-  from { transform: translateX(-1px); }
-  to { transform: translateX(1px); }
+  0% { transform: translateX(-7px); }
+  50% { transform: translateX(7px); }
+  100% { transform: translateX(-7px); }
 }
